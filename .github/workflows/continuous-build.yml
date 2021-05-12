@@ -41,5 +41,5 @@ jobs:
           arguments: check --stacktrace ${{ matrix.coverage && ':opentelemetry-all:jacocoTestReport' || '' }}
           properties: |
             enable.docker.tests=${{ matrix.os == 'ubuntu-latest' }}
-      - uses: codecov/codecov-action@v1
+      - uses: codecov/codecov-action@v1.5.0
         if: ${{ matrix.coverage }}
